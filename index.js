@@ -10,11 +10,6 @@ favouriteMode("dark")
 favouriteEdgeStyle("sharp")
 
 
-
-////////////////////////////////////
-// IGONE THE CODE BELOW THIS LINE //
-////////////////////////////////////
-
 function setProp(prop, value) {
     document.documentElement.style.setProperty(prop, value)
 }
