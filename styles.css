@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Handjet:wght@100..900&family=Jua&family=REM:ital,wght@0,100..900;1,100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
 html {
     scroll-behavior: smooth;
 }
@@ -33,24 +34,33 @@ html, body {
     height: 100%;
 }
 
+/* ...existing code... */
+
 body {
-    padding-top: 60px; /* Adjust this value based on the navbar height */
-    background-color: #d8d3d4; /* Use a solid color */
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    transition: opacity 0.5s ease-in-out;
-    color: white; /* Default text color for the body */
+    padding-top: 60px;
+    background: linear-gradient(135deg, #232526 0%, #414345 100%);
+    color: #fff;
+    font-family: 'Source Serif 4', sans-serif;
+    transition: opacity 0.5s, background 1s;
 }
 
-.Intro {
-    text-align: center;
-    color: black; /* Override text color for the Intro section */
-    font-family: var(--font);
+/* Card style for sections (add to about, Intro, etc. as needed) */
+.about, .Intro {
+    background: rgba(30, 30, 40, 0.85);
+    border-radius: 18px;
+    margin: 30px 10px;
+    padding: 28px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    transition: transform 0.2s;
 }
+
+/* ...existing code... */
 
 .Intro h1, .Intro h2 {
     transition: opacity 3s ease-in-out, transform 3s ease-in-out;
     opacity: 0;
     transform: translateY(20px);
+    font-family: 'Source Serif 4', sans-serif;
 }
 
 
@@ -118,6 +128,8 @@ input {
     left: 0; /* Ensure it starts from the left edge */
     width: 100%;
     z-index: 1000;
+    font-family: 'Sourcer Serif 4', serif;
+    font-size: larger;
 }
 
 .navbar ul {
@@ -132,18 +144,43 @@ input {
     display: inline;
 }
 
+/* ...existing code... */
+
 .navbar ul li a {
     display: block;
     color: white;
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
-    font-family: var(--font);
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s;
+}
+
+.navbar ul li a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 8px;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #ffb347, #ff5e62);
+    border-radius: 2px;
+    transition: width 0.3s cubic-bezier(.4,2,.6,1), left 0.3s cubic-bezier(.4,2,.6,1);
 }
 
 .navbar ul li a:hover {
-    background-color: #575757;
+    color: #ffb347;
+    background-color: transparent;
 }
+
+.navbar ul li a:hover::after {
+    width: 80%;
+    left: 10%;
+}
+
+/* ...existing code... */
 
 .about{
     background-color:rgba(0, 0, 0, 0.562);
@@ -169,7 +206,7 @@ input {
     box-sizing: border-box;
     gap: 10px; /* Add space between text and icon */
     padding: 0 10px; /* Add horizontal padding for better spacing */
-    background-color: rgb(63, 67, 66);
+    background-color: rgb(255, 255, 255);
 }
 
 .linkedin-button ion-icon {
@@ -194,7 +231,7 @@ input {
     box-sizing: border-box;
     gap: 10px; /* Add space between text and icon */
     padding: 0 10px; /* Add horizontal padding for better spacing */
-    background-color: rgb(63, 67, 66);
+    background-color: rgb(255, 255, 255);
 }
 
 .email-button ion-icon {
@@ -219,7 +256,7 @@ input {
     box-sizing: border-box;
     gap: 10px; /* Add space between text and icon */
     padding: 0 10px; /* Add horizontal padding for better spacing */
-    background-color: rgb(63, 67, 66);
+    background-color: rgb(255, 255, 255);
 }
 
 .github-button ion-icon {
